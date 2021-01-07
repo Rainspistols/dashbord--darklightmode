@@ -4,15 +4,19 @@ import Image from '../../assets/images/profileImg.jpeg';
 
 function Profile() {
   return (
-    <Container>
+    <Container className="Profile">
       <ProfileImg src={Image} />
-      <ProfileName>Scott Grant</ProfileName>
+      <ProfileName>Max Galchenko</ProfileName>
     </Container>
   );
 }
 
 const Container = styled.div`
   margin-top: 5rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
 `;
 
 const ProfileImg = styled.img`

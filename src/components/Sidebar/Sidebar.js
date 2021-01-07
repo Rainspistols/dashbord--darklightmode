@@ -1,12 +1,16 @@
 import React from 'react';
 import styled from 'styled-components';
-
+// components
+import Menu from './Menu/Menu';
 import Profile from './Profile';
+import SwitchColors from './SwitchColors';
 
-function Sidebar() {
+function Sidebar({ themePalletes }) {
   return (
     <Container>
       <Profile />
+      <Menu />
+      <SwitchColors themePalletes={themePalletes} />
     </Container>
   );
 }
@@ -20,7 +24,7 @@ const Container = styled.div`
   width: 16rem;
   display: flex;
   flex-direction: column;
-  align-items: center; 
+  align-items: center;
 `;
 
 export default Sidebar;

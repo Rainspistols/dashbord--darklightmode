@@ -10,22 +10,31 @@ const globalTheme = {
   colorGreen: '#5DC399',
 };
 
-export const lightTheme = {
-  primary: '#FFF',
-  secondary: '#F8F8F8',
-  textColor: '#585280',
-  header: '#585280',
-  headerNumber: '#FFF',
-  activeMenu: '#585280',
-  ...globalTheme,
-};
+const themes = [
+  {
+    name: 'lightTheme',
+    primary: '#FFF',
+    secondary: '#F8F8F8',
+    textColor: '#585280',
+    header: '#585280',
+    headerNumber: '#FFF',
+    activeMenu: '#585280',
+    ...globalTheme,
+  },
+  {
+    name: 'darkTheme',
+    primary: '#302C40',
+    secondary: '#2C2839',
+    textColor: '#FFF',
+    header: '#FFF',
+    headerNumber: '#585280',
+    activeMenu: '#FFF',
+    ...globalTheme,
+  },
+];
 
-export const darkTheme = {
-  primary: '#302C40',
-  secondary: '#2C2839',
-  textColor: '#FFF',
-  header: '#FFF',
-  headerNumber: '#585280',
-  activeMenu: '#FFF',
-  ...globalTheme,
-};
+export const themePalletes = themes.map((theme) => ({
+  primary: theme.primary,
+  secondary: theme.secondary,
+}));
+export const [lightTheme, darkTheme] = themes;

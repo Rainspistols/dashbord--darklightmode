@@ -1,15 +1,17 @@
-import React from 'react';
+import React, { useState } from 'react';
 import Dashboard from './containers/Dashboard';
 // styled components
 import { ThemeProvider } from 'styled-components';
 import { GlobalStyles } from './styles/global';
-import { lightTheme, darkTheme } from './styles/theme';
+import { lightTheme, darkTheme, themePalletes } from './styles/theme';
 
 function App() {
+  const [activeTheme, setActiveThem] = useState('lightTheme');
+
   return (
     <ThemeProvider theme={lightTheme}>
       <GlobalStyles />
-      <Dashboard />
+      <Dashboard themePalletes={themePalletes} />
     </ThemeProvider>
   );
 }
