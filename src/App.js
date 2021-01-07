@@ -3,15 +3,23 @@ import Dashboard from './containers/Dashboard';
 // styled components
 import { ThemeProvider } from 'styled-components';
 import { GlobalStyles } from './styles/global';
-import { lightTheme, darkTheme, themePalletes } from './styles/theme';
+import { themes, themePalletes } from './styles/theme';
 
 function App() {
-  const [activeTheme, setActiveThem] = useState('lightTheme');
+  const [activeTheme, setActiveTheme] = useState('darkTheme');
+
+  const onSwitchColors = (e) => {
+    setActiveTheme(e.target.id);
+  };
 
   return (
-    <ThemeProvider theme={lightTheme}>
+    <ThemeProvider theme={themes.find((item) => item.name === activeTheme)}>
       <GlobalStyles />
-      <Dashboard themePalletes={themePalletes} />
+      <Dashboard
+        themePalletes={themePalletes}
+        activeTheme={activeTheme}
+        onSwitchColors={onSwitchColors}
+      />
     </ThemeProvider>
   );
 }

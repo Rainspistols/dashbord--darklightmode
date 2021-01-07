@@ -1,14 +1,18 @@
 import React from 'react';
-import { BrowserRouter as Router, Switch, Route, Link } from 'react-router-dom';
+import { BrowserRouter as Router } from 'react-router-dom';
 // components
 import Main from '../components/Main/Main';
 import Sidebar from '../components/Sidebar/Sidebar';
 
-function Dashboard({themePalletes}) {
+function Dashboard({ themePalletes, activeTheme, onSwitchColors }) {
   return (
     <div>
       <Router>
-        <Sidebar themePalletes={themePalletes}/>
+        <Sidebar
+          themePalletes={themePalletes}
+          activeTheme={activeTheme}
+          onSwitchColors={onSwitchColors}
+        />
       </Router>
       <Main />
     </div>

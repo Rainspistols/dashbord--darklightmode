@@ -10,7 +10,7 @@ const globalTheme = {
   colorGreen: '#5DC399',
 };
 
-const themes = [
+export const themes = [
   {
     name: 'lightTheme',
     primary: '#FFF',
@@ -19,6 +19,7 @@ const themes = [
     header: '#585280',
     headerNumber: '#FFF',
     activeMenu: '#585280',
+    inactiveMenu: '#AAA5A5',
     ...globalTheme,
   },
   {
@@ -29,12 +30,46 @@ const themes = [
     header: '#FFF',
     headerNumber: '#585280',
     activeMenu: '#FFF',
+    inactiveMenu: '#AAA5A5',
+    ...globalTheme,
+  },
+  {
+    name: 'darkBlue',
+    primary: '#482ff7',
+    secondary: '#2d6cdf',
+    textColor: '#f3f169',
+    header: '#f3f169',
+    headerNumber: '#f3f169',
+    activeMenu: '#f3f169',
+    inactiveMenu: '#46c3db',
+    ...globalTheme,
+  },
+  {
+    name: 'purple',
+    primary: '#581b98',
+    secondary: '#faee1c',
+    textColor: '#faee1c',
+    header: '#faee1c',
+    headerNumber: '#faee1c',
+    activeMenu: '#f3558e',
+    inactiveMenu: '#9c1de7',
+    ...globalTheme,
+  },
+  {
+    name: 'videoGame',
+    primary: '#fc5185',
+    secondary: '#364f6b',
+    textColor: '#364f6b',
+    header: '#364f6b',
+    headerNumber: '#364f6b',
+    activeMenu: '#43dde6',
+    inactiveMenu: '#f0f0f0',
     ...globalTheme,
   },
 ];
 
-export const themePalletes = themes.map((theme) => ({
-  primary: theme.primary,
-  secondary: theme.secondary,
+export const themePalletes = themes.map(({ primary, secondary, name }) => ({
+  primary,
+  secondary,
+  name,
 }));
-export const [lightTheme, darkTheme] = themes;

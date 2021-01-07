@@ -5,12 +5,17 @@ import Menu from './Menu/Menu';
 import Profile from './Profile';
 import SwitchColors from './SwitchColors';
 
-function Sidebar({ themePalletes }) {
+function Sidebar({ themePalletes, activeTheme, onSwitchColors,setActiveTheme }) {
   return (
     <Container>
       <Profile />
       <Menu />
-      <SwitchColors themePalletes={themePalletes} />
+      <SwitchColors
+        themePalletes={themePalletes}
+        activeTheme={activeTheme}
+        onSwitchColors={onSwitchColors}
+        setActiveTheme={setActiveTheme}
+      />
     </Container>
   );
 }

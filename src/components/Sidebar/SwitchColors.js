@@ -1,12 +1,12 @@
 import React from 'react';
 import styled from 'styled-components';
 
-function SwitchColors({ changeThemeColor = null, themePalletes }) {
+function SwitchColors({ themePalletes, activeTheme, onSwitchColors }) {
   return (
     <Container className="switchColors">
       {themePalletes.map((themePallete, index) => (
         <Label
-          htmlFor={`checkbox${index}`}
+          htmlFor={themePallete.name}
           key={index}
           primary={themePallete.primary}
           secondary={themePallete.secondary}
@@ -15,8 +15,11 @@ function SwitchColors({ changeThemeColor = null, themePalletes }) {
             className="visually-hidden"
             type="radio"
             aria-hidden="true"
-            id={`checkbox${index}`}
+            id={themePallete.name}
+            value={themePallete.name}
             name="change-color-theme"
+            checked={activeTheme === themePallete.name ? 'checked' : null}
+            onChange={onSwitchColors}
           />
           <SwitchMarker
             primary={themePallete.primary}

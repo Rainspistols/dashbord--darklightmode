@@ -30,13 +30,13 @@ const Container = styled(Link)`
 `;
 
 const Icon = styled.span`
-  color: ${(props) => (props.active ? props.theme.activeMenu : '#AAA5A5')};
+  color: ${(props) => (props.active ? props.theme.activeMenu : props.theme.inactiveMenu)};
   font-size: 1rem;
   margin-right: 1rem;
 `;
 
 const Title = styled.h2`
-  color: ${(props) => (props.active ? props.theme.activeMenu : '#AAA3A5')};
+  color: ${(props) => (props.active ? props.theme.activeMenu : props.theme.inactiveMenu)};
   font-size: 0.9rem;
   margin-right: 1rem;
   font-weight: 300;

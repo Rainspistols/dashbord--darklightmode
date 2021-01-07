@@ -28,7 +28,7 @@ const ProfileImg = styled.img`
 const ProfileName = styled.h2`
   font-size: 1rem;
   font-weight: 300;
-  color: ${({ theme }) => theme.textColor};
+  color: ${({ theme }) => theme.activeMenu};
 `;
 
 export default Profile;
