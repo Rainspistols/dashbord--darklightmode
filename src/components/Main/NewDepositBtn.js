@@ -16,6 +16,15 @@ const AddBtn = styled.a`
   position: absolute;
   top: 6rem;
   right: 4rem;
+
+  @media (max-width: 1099px) {
+    right: 2rem;
+  }
+
+  @media (max-width: 767px) {
+    top: 4rem;
+    right: 1rem;
+  }
 `;
 const AddIcon = styled(IoAddCircle)`
   color: ${({ theme }) => theme.header};

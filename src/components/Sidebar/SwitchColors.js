@@ -64,6 +64,20 @@ const Label = styled.label`
   &:not(:last-of-type) {
     margin-right: 0.5rem;
   }
+
+  @media (max-width: 1199px) {
+    width: 1.5rem;
+    height: 1.5rem;
+    margin: 0.5rem;
+
+    &:not(:last-of-type) {
+      margin-right: 0;
+    }
+  }
+
+  @media (max-width: 768px) {
+    margin: 0.5rem 0;
+  }
 `;
 
 const SwitchMarker = styled.div`

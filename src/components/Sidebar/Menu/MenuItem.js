@@ -5,7 +5,7 @@ import { Link } from 'react-router-dom';
 function MenuItem({ title, icon, active, onClick }) {
   return (
     <Container to="/" active={active} onClick={onClick} data-text={title}>
-      <Icon active={active} data-text={title}>
+      <Icon data-text={title} active={active}>
         {icon}
       </Icon>
       <Title active={active} data-text={title}>
@@ -32,12 +32,24 @@ const Container = styled(Link)`
   &:hover {
     background-color: rgba(0, 0, 0, 0.1);
   }
+
+  @media (max-width: 1199px) {
+    padding-left: 0.3rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
 `;
 
 const Icon = styled.span`
   color: ${(props) => (props.active ? props.theme.activeMenu : props.theme.inactiveMenu)};
   font-size: 1rem;
   margin-right: 1rem;
+
+  @media (max-width: 1199px) {
+    font-size: 1.5rem;
+    margin: 0;
+  }
 `;
 
 const Title = styled.h2`
@@ -47,7 +59,7 @@ const Title = styled.h2`
   font-weight: 300;
 
   @media (max-width: 1199px) {
-    /* display: none; */
+    display: none;
   }
 `;
 

@@ -20,6 +20,10 @@ const Container = styled.div`
   justify-content: flex-end;
   align-items: center;
   margin-bottom: 3rem;
+
+  @media (max-width: 767px) {
+    margin-bottom: 1rem;
+  }
 `;
 
 const ProfileImg = styled.img`

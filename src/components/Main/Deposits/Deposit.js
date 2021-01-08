@@ -20,7 +20,7 @@ function Deposit({ data }) {
         <Subtitle>{deposit.type}</Subtitle>
       </DepositWrapper>
       <Status>
-        <Text>{status.message}</Text>
+        <StatusText>{status.message}</StatusText>
         {(() => {
           switch (status.level) {
             case 1:
@@ -53,6 +53,10 @@ const Container = styled.div`
     z-index: 2;
     position: relative;
   }
+
+  @media (max-width: 400px) {
+    padding: 0.5rem 0.5rem;
+  }
 `;
 
 const Text = styled.h2`
@@ -60,6 +64,10 @@ const Text = styled.h2`
   font-weight: 500;
   color: ${({ theme }) => theme.textColor};
   margin: 0;
+
+  @media (max-width: 999px) {
+    font-size: 0.6em;
+  }
 `;
 
 const Subtitle = styled(Text)`
@@ -72,6 +80,14 @@ const Property = styled.div`
   width: 30%;
   display: flex;
   align-items: center;
+
+  @media (max-width: 699px) {
+    width: 40%;
+  }
+
+  @media (max-width: 569px) {
+    width: 50%;
+  }
 `;
 
 const PropertyText = styled.div`
@@ -82,6 +98,10 @@ const PropertyText = styled.div`
 
 const PropertyStreet = styled(Text)`
   font-size: 1rem;
+
+  @media (max-width: 999px) {
+    font-size: 0.7em;
+  }
 `;
 
 const PropertyImg = styled.img`
@@ -92,14 +112,30 @@ const PropertyImg = styled.img`
 
 const MoveInDate = styled(Text)`
   width: 15%;
+
+  @media (max-width: 699px) {
+    width: 20%;
+  }
+
+  @media (max-width: 569px) {
+    width: 40%;
+    text-align: center;
+  }
 `;
 
 const Rent = styled(Text)`
   width: 10%;
+  @media (max-width: 699px) {
+    display: none;
+  }
 `;
 
 const DepositWrapper = styled.div`
   width: 15%;
+
+  @media (max-width: 699px) {
+    display: none;
+  }
 `;
 
 const Status = styled.div`
@@ -107,6 +143,16 @@ const Status = styled.div`
   align-items: center;
   justify-content: space-between;
   flex-grow: 1;
+  margin-left: 1rem;
+
+  @media (max-width: 699px) {
+    width: 40%;
+    flex-grow: 0;
+  }
+
+  @media (max-width: 569px) {
+    width: 10%;
+  }
 `;
 
 const StatusIndicator = styled.div`
@@ -114,6 +160,12 @@ const StatusIndicator = styled.div`
   height: 15px;
   border-radius: 10px;
   background-color: ${(props) => props.color};
+`;
+
+const StatusText = styled(Text)`
+  @media (max-width: 569px) {
+    display: none;
+  }
 `;
 
 export default Deposit;

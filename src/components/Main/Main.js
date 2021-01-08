@@ -34,6 +34,19 @@ const Container = styled.div`
   @media (max-width: 1299px) {
     margin-left: 10rem;
   }
+
+  @media (max-width: 1199px) {
+    margin-left: 5rem;
+  }
+
+  @media (max-width: 1099px) {
+    padding: 0 2rem;
+  }
+
+  @media (max-width: 767px) {
+    padding: 0 1rem;
+    margin-left: 3rem;
+  }
 `;
 
 export default Main;

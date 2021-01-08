@@ -35,7 +35,13 @@ const Container = styled.div`
     width: 10rem;
   }
 
+  @media (max-width: 1199px) {
+    width: 5rem;
+  }
 
+  @media (max-width: 767px) {
+    width: 3rem;
+  }
 `;
 
 export default Sidebar;
