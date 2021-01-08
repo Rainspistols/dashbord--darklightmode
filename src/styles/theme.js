@@ -39,7 +39,7 @@ export const themes = [
     secondary: '#2d6cdf',
     textColor: '#f3f169',
     header: '#f3f169',
-    headerNumber: '#f3f169',
+    headerNumber: '#2d6cdf',
     activeMenu: '#f3f169',
     inactiveMenu: '#46c3db',
     ...globalTheme,
