@@ -18,7 +18,6 @@ function SwitchColors({ themePalletes, activeTheme, onSwitchColors }) {
             id={themePallete.name}
             value={themePallete.name}
             name="change-color-theme"
-            checked={activeTheme === themePallete.name ? 'checked' : null}
             onChange={onSwitchColors}
           />
           <SwitchMarker
