@@ -6,6 +6,7 @@ import image5 from './../../../assets/images/property5.jpg';
 import image6 from './../../../assets/images/property6.jpg';
 import image7 from './../../../assets/images/property7.jpg';
 import image8 from './../../../assets/images/property8.jpg';
+import image9 from './../../../assets/images/property9.jpg';
 
 export const depositsData = {
   active: [
@@ -160,7 +161,7 @@ export const depositsData = {
         },
         imageUrl: image8,
       },
-      moveInDate: '1 January 2020',
+      moveInDate: '1 January 2021',
       rent: 2000.0,
       deposit: {
         amount: 7000.0,
@@ -169,6 +170,26 @@ export const depositsData = {
       status: {
         message: 'Expired: No Payment Received',
         level: 1,
+      },
+    },
+    {
+      property: {
+        address: {
+          street: '1 Snyder Rd',
+          city: 'Englewood Cliffs',
+          state: 'NJ',
+        },
+        imageUrl: image9,
+      },
+      moveInDate: '1 February 2021',
+      rent: 12000.0,
+      deposit: {
+        amount: 36000.0,
+        type: 'First, Last & Security & Villa & Pool',
+      },
+      status: {
+        message: 'Expired: No Payment Received',
+        level: 3,
       },
     },
   ],

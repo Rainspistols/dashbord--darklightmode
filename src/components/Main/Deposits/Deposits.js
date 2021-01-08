@@ -1,10 +1,16 @@
-import React from 'react';
+import React, { useState } from 'react';
 import styled from 'styled-components';
 import AllDepositsBtn from './AllDepositsBtn';
 import Deposit from './Deposit';
 import SortingBar from './SortingBar';
 
 function Deposits({ title, data, count }) {
+  const [allDepostisShown, setAllDepositsShown] = useState(false);
+
+  const onAllDepositsBtn = () => {
+    setAllDepositsShown(!allDepostisShown);
+  };
+
   return (
     <div>
       <Title>
@@ -12,10 +18,18 @@ function Deposits({ title, data, count }) {
         <DepositsCount>{count}</DepositsCount>
       </Title>
       <SortingBar />
-      {data.map((deposit) => (
-        <Deposit data={deposit} key={deposit.property.address.street} />
-      ))}
-      <AllDepositsBtn title={title} />
+      {data.map((deposit, index) =>
+        !allDepostisShown ? (
+          index < 3 && <Deposit data={deposit} key={deposit.property.address.street} />
+        ) : (
+          <Deposit data={deposit} key={deposit.property.address.street} />
+        )
+      )}
+      <AllDepositsBtn
+        title={title}
+        onClick={onAllDepositsBtn}
+        allDepostisShown={allDepostisShown}
+      />
     </div>
   );
 }

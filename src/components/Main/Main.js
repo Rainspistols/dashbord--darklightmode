@@ -11,8 +11,16 @@ function Main() {
     <Container>
       <Nav />
       <NewDepositBtn />
-      <Deposits title="Active Deposits" count={depositsData.active.length} data={depositsData.active} />
-      <Deposits title="Closed Deposits" count={depositsData.closed.length} data={depositsData.closed} />
+      <Deposits
+        title="Active Deposits"
+        count={depositsData.active.length}
+        data={depositsData.active}
+      />
+      <Deposits
+        title="Closed Deposits"
+        count={depositsData.closed.length}
+        data={depositsData.closed}
+      />
     </Container>
   );
 }

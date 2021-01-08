@@ -1,10 +1,10 @@
 import React from 'react';
 import styled from 'styled-components';
 
-function AllDepositsBtn({ title }) {
+function AllDepositsBtn({ title, onClick, allDepostisShown }) {
   return (
     <Container>
-      <Button>All {title}</Button>
+      <Button onClick={onClick}>{allDepostisShown? 'Minimize ' : 'All '} {title}</Button>
     </Container>
   );
 }
@@ -18,7 +18,7 @@ const Container = styled.div`
 
 const Button = styled.a`
   text-transform: uppercase;
-  width: 9rem;
+  width: 12rem;
   font-size: 0.6rem;
   font-weight: 700;
   background-image: ${({ theme }) => theme.gradient};

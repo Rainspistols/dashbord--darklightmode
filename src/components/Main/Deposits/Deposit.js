@@ -17,7 +17,7 @@ function Deposit({ data }) {
       <Rent>${rent}</Rent>
       <DepositWrapper>
         <Text>${deposit.amount}</Text>
-        <Subtitle>${deposit.type}</Subtitle>
+        <Subtitle>{deposit.type}</Subtitle>
       </DepositWrapper>
       <Status>
         <Text>{status.message}</Text>
