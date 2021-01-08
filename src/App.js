@@ -6,7 +6,7 @@ import { GlobalStyles } from './styles/global';
 import { themes, themePalletes } from './styles/theme';
 
 function App() {
-  const [activeTheme, setActiveTheme] = useState('darkTheme');
+  const [activeTheme, setActiveTheme] = useState('lightTheme');
 
   const onSwitchColors = (e) => {
     setActiveTheme(e.target.id);

@@ -1,6 +1,6 @@
 import React from 'react';
 import styled from 'styled-components';
-import Image from '../../assets/images/profileImg.jpeg';
+import Image from '../../assets/images/profileImg.jpg';
 
 function Profile() {
   return (
