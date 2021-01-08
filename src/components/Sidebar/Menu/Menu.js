@@ -7,7 +7,13 @@ function Menu() {
   const [activeItem, setActiveItem] = useState('Home');
 
   const onItemClick = (e) => {
-    setActiveItem(e.target.innerText);
+    if (e.target.dataset.text) {
+      setActiveItem(e.target.dataset.text);
+    } else {
+      if (e.target.ownerSVGElement) {
+        setActiveItem(e.target.ownerSVGElement.parentElement.dataset.text);
+      }
+    }
   };
 
   return (

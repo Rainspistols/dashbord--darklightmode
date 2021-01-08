@@ -15,6 +15,7 @@ export const GlobalStyles = createGlobalStyle`
         padding: 0;
         font-family: "Roboto", sans-serif;
         transition: all .25s linear;
+        font-size: 16px;
     }
 
     .visually-hidden {

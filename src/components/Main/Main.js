@@ -30,6 +30,10 @@ const Container = styled.div`
   margin-left: 16rem;
   position: relative;
   padding: 0 4rem;
+
+  @media (max-width: 1299px) {
+    margin-left: 10rem;
+  }
 `;
 
 export default Main;

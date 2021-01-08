@@ -4,9 +4,13 @@ import { Link } from 'react-router-dom';
 
 function MenuItem({ title, icon, active, onClick }) {
   return (
-    <Container to="/" active={active} onClick={onClick}>
-      <Icon active={active}>{icon}</Icon>
-      <Title active={active}>{title}</Title>
+    <Container to="/" active={active} onClick={onClick} data-text={title}>
+      <Icon active={active} data-text={title}>
+        {icon}
+      </Icon>
+      <Title active={active} data-text={title}>
+        {title}
+      </Title>
     </Container>
   );
 }
@@ -23,6 +27,7 @@ const Container = styled(Link)`
   transition: 0.2s all ease-in-out;
   text-decoration: none;
   color: inherit;
+  z-index: 2;
 
   &:hover {
     background-color: rgba(0, 0, 0, 0.1);
@@ -40,6 +45,10 @@ const Title = styled.h2`
   font-size: 0.9rem;
   margin-right: 1rem;
   font-weight: 300;
+
+  @media (max-width: 1199px) {
+    /* display: none; */
+  }
 `;
 
 export default MenuItem;

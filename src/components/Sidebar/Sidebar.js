@@ -5,7 +5,7 @@ import Menu from './Menu/Menu';
 import Profile from './Profile';
 import SwitchColors from './SwitchColors';
 
-function Sidebar({ themePalletes, activeTheme, onSwitchColors,setActiveTheme }) {
+function Sidebar({ themePalletes, activeTheme, onSwitchColors, setActiveTheme }) {
   return (
     <Container>
       <Profile />
@@ -30,6 +30,12 @@ const Container = styled.div`
   display: flex;
   flex-direction: column;
   align-items: center;
+
+  @media (max-width: 1299px) {
+    width: 10rem;
+  }
+
+
 `;
 
 export default Sidebar;
