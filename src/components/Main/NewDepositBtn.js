@@ -13,12 +13,15 @@ function NewDepositBtn() {
 const AddBtn = styled.a`
   border-radius: 25px;
   cursor: pointer;
+  position: absolute;
+  top: 6rem;
+  right: 7rem;
 `;
 const AddIcon = styled(IoAddCircle)`
   color: ${({ theme }) => theme.header};
   width: 50px;
   height: 50px;
-  box-sizing: border-box; 
+  box-sizing: border-box;
 `;
 
 export default NewDepositBtn;

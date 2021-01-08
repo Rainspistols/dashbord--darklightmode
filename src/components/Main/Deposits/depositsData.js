@@ -2,6 +2,10 @@ import image1 from './../../../assets/images/property1.jpg';
 import image2 from './../../../assets/images/property2.jpg';
 import image3 from './../../../assets/images/property3.jpg';
 import image4 from './../../../assets/images/property4.jpg';
+import image5 from './../../../assets/images/property5.jpg';
+import image6 from './../../../assets/images/property6.jpg';
+import image7 from './../../../assets/images/property7.jpg';
+import image8 from './../../../assets/images/property8.jpg';
 
 export const depositsData = {
   active: [
@@ -45,6 +49,66 @@ export const depositsData = {
         level: 3,
       },
     },
+    {
+      property: {
+        address: {
+          street: '10019 53rd St',
+          city: 'New York',
+          state: 'NY',
+        },
+        imageUrl: image3,
+      },
+      moveInDate: '18 December 2020',
+      rent: 8000.0,
+      deposit: {
+        amount: 24000.0,
+        type: 'Condo',
+      },
+      status: {
+        message: 'Payment Processed',
+        level: 1,
+      },
+    },
+    {
+      property: {
+        address: {
+          street: '5 Horizon Rd APT 511',
+          city: 'Fort Lee',
+          state: 'NJ',
+        },
+        imageUrl: image4,
+      },
+      moveInDate: '11 October 2020',
+      rent: 2100.0,
+      deposit: {
+        amount: 4200.0,
+        type: 'Condo',
+      },
+      status: {
+        message: 'Payment Processed',
+        level: 1,
+      },
+    },
+    {
+      property: {
+        address: {
+          street: '545 1st St',
+          city: 'Carlstadt',
+          state: 'NJ',
+        },
+        imageUrl: image5,
+      },
+      moveInDate: '1 January 2021',
+      rent: 5400.0,
+      deposit: {
+        amount: 12000.0,
+        type: 'House',
+      },
+      status: {
+        message: 'Payment Processed',
+        level: 1,
+      },
+    },
   ],
   closed: [
     {
@@ -54,7 +118,7 @@ export const depositsData = {
           city: 'Las Vegas',
           state: 'NV',
         },
-        imageUrl: image3,
+        imageUrl: image6,
       },
       moveInDate: '3 February 2020',
       rent: 3300.0,
@@ -74,12 +138,32 @@ export const depositsData = {
           city: 'Raleigh',
           state: 'NC',
         },
-        imageUrl: image4,
+        imageUrl: image7,
       },
       moveInDate: '12 January 2020',
       rent: 2500.0,
       deposit: {
         amount: 7500.0,
+        type: 'First, Last & Security',
+      },
+      status: {
+        message: 'Expired: No Payment Received',
+        level: 1,
+      },
+    },
+    {
+      property: {
+        address: {
+          street: '198 Colonial Ct',
+          city: 'Teaneck',
+          state: 'NC',
+        },
+        imageUrl: image8,
+      },
+      moveInDate: '1 January 2020',
+      rent: 2000.0,
+      deposit: {
+        amount: 7000.0,
         type: 'First, Last & Security',
       },
       status: {

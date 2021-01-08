@@ -33,8 +33,8 @@ const DepositsCount = styled.div`
   font-size: 1rem;
   background-color: ${({ theme }) => theme.header};
   color: ${({ theme }) => theme.headerNumber};
-  width: 20px;
-  height: 20px;
+  width: 28px;
+  height: 28px;
   display: flex;
   align-items: center;
   justify-content: center;

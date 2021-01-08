@@ -42,7 +42,7 @@ const Container = styled.div`
   display: flex;
   align-items: center;
   padding: 1rem 0;
-  border-radius: 1px solid rgba(190, 190, 190, 0.22);
+  border-bottom: 1px solid rgba(190, 190, 190, 0.22);
   cursor: pointer;
   background-color: ${({ theme }) => theme.primary};
   transition: all ease-in-out 300ms;
@@ -83,8 +83,8 @@ const PropertyStreet = styled(Text)`
 `;
 
 const PropertyImg = styled.img`
-  height: 35px;
-  width: 35px;
+  height: 45px;
+  width: 45px;
   border-radius: 50%;
 `;
 
