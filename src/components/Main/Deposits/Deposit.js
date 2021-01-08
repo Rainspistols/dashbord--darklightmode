@@ -41,15 +41,17 @@ function Deposit({ data }) {
 const Container = styled.div`
   display: flex;
   align-items: center;
-  padding: 1rem 0;
+  padding: 1rem 1rem;
   border-bottom: 1px solid rgba(190, 190, 190, 0.22);
   cursor: pointer;
   background-color: ${({ theme }) => theme.primary};
   transition: all ease-in-out 300ms;
 
   &:hover {
-    /* box-shadow: 0px 10px 8px -8px rgba(138, 153, 192, 0.6); */
+    box-shadow: 0px 10px 8px -8px rgba(138, 153, 192, 0.6);
     background-color: ${({ theme }) => theme.secondary};
+    z-index: 2;
+    position: relative;
   }
 `;
 
@@ -103,6 +105,8 @@ const DepositWrapper = styled.div`
 const Status = styled.div`
   display: flex;
   align-items: center;
+  justify-content: space-between;
+  flex-grow: 1;
 `;
 
 const StatusIndicator = styled.div`
@@ -110,9 +114,6 @@ const StatusIndicator = styled.div`
   height: 15px;
   border-radius: 10px;
   background-color: ${(props) => props.color};
-  margin-left: 1rem;
-  position: absolute;
-  right: 7rem;
 `;
 
 export default Deposit;

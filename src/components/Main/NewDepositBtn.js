@@ -15,7 +15,7 @@ const AddBtn = styled.a`
   cursor: pointer;
   position: absolute;
   top: 6rem;
-  right: 7rem;
+  right: 4rem;
 `;
 const AddIcon = styled(IoAddCircle)`
   color: ${({ theme }) => theme.header};
